@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" property="description" content="Bienvenidos a nuestra page de contactos. En este sitio podra encontrar nuestras redes sociales y 
+    comunicarse con nuestro soporte tecnico o administrativo. 
+    Gracias por confiar en nosotros y aver llegaod hasta aca">
+   <meta name="keywords" content="Contacto - Servicios - Suitrab - footer + redes">
+   <meta name="og:url" property="og:url" content="https://github.com/cuellogabriel/Suitrab">
+    <title>Suitrab - Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+
+  <body>
+    <!-- LOGO + NAV -->
+    <header>
+      <div class="logo">
+        <!-- LOGO -->
+        <p style="color: #e0ac1c;">Suitrab</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./acercaDe.html">Acerca De</a></li>
+          <li><a href="./servicios.html">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>   
+        </ul>
+      </nav>
+      <button><a href ="#">Sponsor</a></button>
+      <video src="/movie/20230315_111308.mp4" autoplay loop muted poster ></video>
+    </header>
+
+    <main class="contactanos">
+      <form action="">
+        <h2 class="contacto">Contacto</h2>
+        <input type="text" name="Nombre" placeholder="Nombre">
+        <input type="text" name="correo" placeholder="Correo">
+        <input type="text" name="telefono" placeholder="Telefono">
+        <textarea name="mensaje" placeholder="Mensaje"></textarea>
+        <input class="okey" type="button" value="Enviar" id="boton">
+      </form>
+
+      <div class="iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26217.695428799023!2d-59.70169571774759!3d-34.775439745957506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc05293012d149%3A0xbffb4ad7d99f808c!2sSuipacha%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1678717136417!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </main>
+   
+      <footer class="footer-distributed">
+   
+       <div class="footer-left">
+           <h3><span>Coop Suitrab</span></h3>
+   
+           <p class="footer-links">
+               <a href="../index.html">Home</a>
+               |
+               <a href="./acercaDe.html">Acerca De</a>
+               |
+               <a href="./servicios.html">Servicios</a>
+               |
+               <a href="#">Contacto</a>
+           </p>
+   
+           <p class="footer-company-name">Suitrab Cooperativa © 2023 <strong>Frigorifico</strong> Derechos Reservados</p>
+       </div>
+   
+       <div class="footer-center">
+           <div>
+               <i class="fa fa-map-marker"></i>
+               <p style="color: #e0ac1c;"><span></span>
+                   Numero de Consulta</p>
+           </div>
+   
+           <div>
+             <i class="phone"><img src="../img/telefono.jpg" alt="telefono"></i>
+               <p > +54 xxxx-xxxxxx </p>
+           </div>
+           <div>
+               <i class="email"><img src="../img/email.jpg" alt="email"></i>
+               <p class="position"><a href="robertogabrielcuello@gmail.com">SuitrabFrigo@gmail.com</a></p>
+           </div>
+       </div>
+       <div class="footer-right">
+           <p class="footer-company-about">
+               <span style="color: #e0ac1c;">Redes Sociales</span>
+               <strong>Frigorifico</strong> Aca devemos remplazar este texto por metas o breve descripsion de lo que es el frigorifico..
+           </p>
+           <div class="social">
+             <a href="https://es-la.facebook.com/" target="_blank"><img src="../img/facebook.png" alt="facebook"></a>
+             <a href="https://www.youtube.com/" target="_blank"><img src="../img/youtube.jpg" alt="youtube"></a>
+             <a href="https://www.linkedin.com/in/gabriel-cuello-1368a2253/" target="_blank"><img src="../img/linkedin.png" alt="linkedin"></a>
+             <a href="https://www.instagram.com/" target="_blank"><img src="../img/instagram.png" alt="instagram"></a>
+             <a href="https://twitter.com/" target="_blank"><img class="twetter1" src="../img/twetter.png" alt="twetter"></a>
+           </div>
+       </div>
+       <div class="what">
+        <a href="https://api.whatsapp.com/send/?phone=542324342375" target="_blank" ><img src="../img/whatsapp.png" alt=""></a>
+      </div>
+   </footer>
+   <script >
+// Seleccionamos el iframe y obtenemos su posición final
+const iframe = document.querySelector('iframe');
+const iframeFinalPos = iframe.getBoundingClientRect();
+
+// Creamos un div que servirá como copia del iframe para la animación
+const iframeCopy = document.createElement('div');
+iframeCopy.style.position = 'absolute';
+iframeCopy.style.top = '0';
+iframeCopy.style.left = '0';
+iframeCopy.style.width = `${iframe.offsetWidth}px`;
+iframeCopy.style.height = `${iframe.offsetHeight}px`;
+iframeCopy.style.background = 'rgba(0, 0, 0, 0.4)';
+iframeCopy.style.padding = '15px 25px';
+iframeCopy.style.boxSizing = 'border-box';
+iframeCopy.style.borderRadius = '7px';
+iframeCopy.style.borderRadius = '20px';
+iframeCopy.style.zIndex = '9999';
+
+// Agregamos el div al body de la página
+document.body.appendChild(iframeCopy);
+
+// Ocultamos el iframe original
+iframe.style.display = 'none';
+
+// Animamos la copia del iframe hasta su posición final
+const animation = iframeCopy.animate([
+  { transform: `translate(${window.innerWidth/2 - iframe.offsetWidth/2}px, -${iframe.offsetHeight}px)` },
+  { transform: `translate(${iframeFinalPos.left}px, ${iframeFinalPos.top}px)` }
+], {
+  duration: 1000,
+  easing: 'ease-out',
+  fill: 'forwards'
+});
+
+// Cuando termina la animación, eliminamos la copia y mostramos el iframe original
+animation.onfinish = () => {
+  iframeCopy.parentNode.removeChild(iframeCopy);
+  iframe.style.display = 'block';
+};
+   </script>
+</body>
+</html>
